@@ -1,14 +1,107 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SiuRealty</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('images/bcard.png') no-repeat center center/cover;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      background-color: rgba(0,0,0,0.4);
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      padding: 15px 30px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .buttons a:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #343a40;
+      color: white;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 500px) {
+      .buttons {
+        flex-direction: column;
+      }
+
+      .buttons a {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to SiuRealty Forms</h1>
-  <p>
-    <a href="renter/">Renter Form</a><br>
-    <a href="buyer/">Buyer Form</a>
-  </p>
+
+  <header>
+    <h1>Welcome to SiuRealty</h1>
+  </header>
+
+  <main>
+    <p>Select your form below:</p>
+    <div class="buttons">
+      <a href="renter/">Renter Form</a>
+      <a href="buyer/">Buyer Form</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 SiuRealty. All rights reserved.
+  </footer>
+
 </body>
 </html>

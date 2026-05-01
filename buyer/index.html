@@ -1,11 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=https://docs.google.com/forms/d/e/1FAIpQLScfYgW3VDEN08wqyWl2Fp36qWHV2qQDVG_rsotRKohCDxH4rA/viewform?usp=header">
-  <title>Buyer Form</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buyer Application - WeTrust Realty</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    background: #0f172a;
+    color: white;
+  }
+
+  /* LOGO */
+  .logo {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    width: 360px;
+    height: auto;
+    border-radius: 10px;
+    z-index: 2000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      width: 180px;
+    }
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 28px;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+  }
+
+  nav a:hover {
+    color: #38bdf8;
+  }
+
+  /* HERO */
+  .hero {
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+    margin-bottom: 8px;
+  }
+
+  .hero p {
+    color: #cbd5f5;
+    max-width: 600px;
+  }
+
+  /* FORM */
+  section {
+    padding: 60px 20px;
+    max-width: 750px;
+    margin: auto;
+  }
+
+  .form-box {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  }
+
+  .header {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    color: #cbd5f5;
+    font-size: 14px;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #0f172a;
+    color: white;
+    font-size: 14px;
+  }
+
+  button {
+    margin-top: 22px;
+    width: 100%;
+    padding: 14px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  button:hover {
+    background: #0ea5e9;
+  }
+
+</style>
 </head>
+
 <body>
-  Redirecting to Buyer Form...
+
+<!-- LOGO -->
+<img src="/images/bc.jpeg" class="logo" alt="WeTrust Realty Logo">
+
+<!-- NAV -->
+<nav>
+  <div><strong>WeTrust Realty</strong></div>
+  <div>
+    <a href="#form">Buyer Form</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Buyer Application</h1>
+  <p>Get matched with the right home faster with pre-screened buyer intake</p>
+</section>
+
+<!-- FORM -->
+<section id="form">
+
+  <div class="form-box">
+
+    <div class="header">
+      Siu Man Kwan Dre: 02240390<br>
+      Wetrust Realty Dre: 02125613
+    </div>
+
+    <form action="https://formspree.io/f/mjglvzgl" method="POST">
+
+      <label>First Name *</label>
+      <input type="text" name="first_name" required>
+
+      <label>Last Name *</label>
+      <input type="text" name="last_name" required>
+
+      <label>Email Address *</label>
+      <input type="email" name="email" required>
+
+      <label>Phone Number *</label>
+      <input type="tel" name="phone" required>
+
+      <label>Price Range *</label>
+      <input type="text" name="price_range" required>
+
+      <label>Do you have pre-approval? *</label>
+      <select name="preapproval" required>
+        <option value="">Select</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label>When are you looking to buy? *</label>
+      <input type="date" name="buy_date" required>
+
+      <label>Area *</label>
+      <input type="text" name="area" required>
+
+      <label>Other Info</label>
+      <textarea name="other_info" rows="4"></textarea>
+
+      <button type="submit">Submit Buyer Application</button>
+
+    </form>
+
+  </div>
+
+</section>
+
 </body>
 </html>

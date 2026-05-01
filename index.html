@@ -1,108 +1,193 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SiuRealty</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Real Estate AI</title>
+
   <style>
-    /* Reset some default styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
-      line-height: 1.6;
+      background: #0f172a;
+      color: #fff;
     }
 
-header {
-  background: url('images/bcard.png') no-repeat top left; /* Top-left corner */
-  background-size: auto; /* Keep original size */
-  height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-  padding: 20px; /* optional, so text doesn't overlap the image */
-}
-
-    header h1 {
-      font-size: 2.5rem;
-      background-color: rgba(0,0,0,0.4);
-      padding: 10px 20px;
-      border-radius: 8px;
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
     }
 
-    main {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      text-align: center;
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
     }
 
-    .buttons {
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
     }
 
-    .buttons a {
-      text-decoration: none;
-      padding: 15px 30px;
-      background-color: #007bff;
-      color: white;
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: #cbd5f5;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      background: #38bdf8;
+      border: none;
       border-radius: 8px;
+      color: #000;
       font-weight: bold;
-      transition: background-color 0.3s, transform 0.2s;
+      cursor: pointer;
+      margin: 5px;
     }
 
-    .buttons a:hover {
-      background-color: #0056b3;
-      transform: scale(1.05);
+    .btn:hover {
+      background: #0ea5e9;
+    }
+
+    section {
+      padding: 80px 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #cbd5f5;
+    }
+
+    /* ABOUT */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #343a40;
-      color: white;
-      margin-top: 50px;
+      padding: 30px;
+      color: #94a3b8;
     }
 
-    @media (max-width: 500px) {
-      .buttons {
-        flex-direction: column;
+    @media(max-width: 768px) {
+      .about {
+        grid-template-columns: 1fr;
       }
 
-      .buttons a {
-        width: 100%;
+      .hero h1 {
+        font-size: 2.2rem;
       }
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Welcome to SiuRealty</h1>
-  </header>
-
-  <main>
-    <p>Select your form below:</p>
-    <div class="buttons">
+  <!-- NAV -->
+  <nav>
+    <div><strong>MyBrand</strong></div>
+    <div>
+      <a href="#about">About</a>
       <a href="renter/">Renter Form</a>
       <a href="buyer/">Buyer Form</a>
+      <a href="#contact">Contact</a>
     </div>
-  </main>
+  </nav>
 
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>AI-Powered Real Estate Experience</h1>
+      <p>Turn property photos into stunning videos. Fast. Simple. Powerful.</p>
+
+      <button class="btn" onclick="location.href='buyer/'">I'm a Buyer</button>
+      <button class="btn" onclick="location.href='renter/'">I'm a Renter</button>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="about">
+      <div>
+        <p>
+          We combine AI and real estate to create engaging visual experiences
+          that help buyers and renters connect with properties instantly.
+        </p>
+      </div>
+      <div>
+        <p>
+          Our platform transforms simple photos into cinematic videos,
+          helping listings stand out and attract more interest.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+
+    <div class="contact-box">
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSf97CGNWv1HllpVEM5eEQ_ZZVAOgnEa24MzgchgLQd4mbfq1A/viewform?embedded=true"
+        width="100%" 
+        height="800" 
+        frameborder="0"
+        style="border-radius: 10px; background: white;">
+        Loading…
+      </iframe>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    &copy; 2026 SiuRealty. All rights reserved.
+    © 2026 MyBrand. All rights reserved.
   </footer>
 
 </body>
